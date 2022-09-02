@@ -67,7 +67,7 @@ namespace limbo {
                 if (bo.total_iterations() == 0)
                     (*this->_log_file) << "#iteration gp_likelihood" << std::endl;
 
-                (*this->_log_file) << bo.total_iterations() << " " << bo.model().get_lik() << std::endl;
+                (*this->_log_file) << bo.total_iterations() << " " << bo.model().get_log_lik() << std::endl;
             }
         };
     }

@@ -277,7 +277,7 @@ namespace limbo {
             {
                 if (!Params::bayes_opt_bobase::stats_enabled())
                     return;
-                _res_dir = tools::hostname() + "_" + tools::date() + "_" + tools::getpid();
+                _res_dir = Params::bayes_opt_bobase::base_dir() + "/" + Params::bayes_opt_bobase::dir_with_results_prefix() + tools::hostname() + "_" + tools::date() + "_" + tools::getpid();
                 boost::filesystem::path my_path(_res_dir);
                 boost::filesystem::create_directory(my_path);
             }
